@@ -125,6 +125,7 @@ class _MyHomePageState extends State<MyHomePage> {
         'offerToReceiveVideo': 1,
       });
       final session = sdp.parse(description.sdp.toString());
+      print('Offer');
       print(json.encode(session));
       _offer = true;
 
@@ -202,7 +203,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             TextField(
               controller: _sdpController,
-              maxLines: 6,
+              maxLines: 4,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
